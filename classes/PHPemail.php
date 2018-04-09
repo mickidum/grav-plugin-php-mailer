@@ -36,20 +36,14 @@ class PHPemail
             $headers = 'MIME-Version: 1.0' . "\r\n" . 'Content-type: text/html; charset=UTF-8' . "\r\n";
             $headers .= 'From:"'.$from_name.'" <'.$from.'>';
 
-            // echo $headers;
-            // echo $to;
-
             $message .= "<tr><th style='padding: 10px;border-top:dotted 1px #000;border-left:dotted 1px #000;'><strong>פרטים</strong></th><td style='padding:10px;border-top:dotted 1px #000;'>{$body}</td>";
             $message = $message_header.$message.$message_footer;
+            
             try {
                 mail($to, $subject, $message, $headers);
             } catch (Exception $e) {
                 echo "error sending mail";
             }
-            // echo $message;
-            // echo 'sent successful';
-            
         }
     }
-
 }

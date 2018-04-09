@@ -6,7 +6,6 @@ use Grav\Common\Grav;
 use Grav\Common\Plugin;
 use Grav\Common\Twig\Twig;
 use Grav\Plugin\PHPemail\PHPemail;
-// use PHPMailer\PHPMailer\PHPMailer;
 use RocketTheme\Toolbox\Event\Event;
 
 /**
@@ -67,9 +66,7 @@ class PHPMailerPlugin extends Plugin
                 $vars = array(
                     'form' => $form
                 );
-                // echo "<h2>FORM</h2><pre>";
-                // print_r($vars);
-                // echo "</pre>";
+                
                 $grav = Grav::instance();
                 $grav->fireEvent('onEmailSend', new Event(['params' => &$params, 'vars' => &$vars]));
 
@@ -79,10 +76,6 @@ class PHPMailerPlugin extends Plugin
                 $this->email = new PHPemail($message);
 
                 $this->email->send();
-
-                // echo "<h2>MESSAGE</h2><pre>";
-                // print_r($message);
-                // echo "</pre>";
 
                 break;
         }
@@ -114,13 +107,6 @@ class PHPMailerPlugin extends Plugin
 
         // Create message object.
         $message = [];
-        // echo "<h2>PARAMS</h2><pre>";
-        // print_r($params);
-        // echo "</pre>";
-
-        // echo "<h2>VARS</h2><pre>";
-        // print_r($vars);
-        // echo "</pre>";
 
 
         if (!$params['to']) {
@@ -129,9 +115,8 @@ class PHPMailerPlugin extends Plugin
         if (!$params['from']) {
             throw new \RuntimeException($this->grav['language']->translate('PLUGIN_EMAIL.PLEASE_CONFIGURE_A_FROM_ADDRESS'));
         }
-        // echo "<h2>PARAMS[BODY]</h2><pre>";
-        // print_r($twig->processString($params['body'], $vars));
-        // echo "</pre>";
+        
+        
         // Process parameters.
         foreach ($params as $key => $value) {
 
