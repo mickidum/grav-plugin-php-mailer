@@ -48,55 +48,54 @@ Note that if you use the admin plugin, a file with your configuration, and named
 
 <pre>
 	<code>
-			---
-			title: 'Contact Form'
-			form:
-			    name: contactform
-			    classes: pure-form ajax-form-sending
-			    action: /form
-			    template: form-messages
-			    fields:
-			        -
-			            name: name
-			            label: 'full name'
-			            placeholder: 'full name'
-			            autocomplete: 'on'
-			            type: text
-			            validate: 
-			            	required: true
-			        -
-			            name: phone
-			            label: Phone
-			            placeholder: Phone
-			            type: text
-		            	validate:
-              			required: true
-			        -
-			            name: email
-			            label: 'email'
-			            placeholder: 'example@test.com'
-			            type: email
-			        -
-			            name: message
-			            label: 'Your message'
-			            placeholder: 'Your message'
-			            type: textarea
-			    buttons:
-			        submit:
-			            type: submit
-			            value: Send
-			            classes: 'pure-button pure-button-primary button-large'
-			            wrapper: p
-			    process:
-			        -
-			            phpemail:
-			                subject: '[Site Contact Form] {{ form.value.name|e }}'
-			                body: '{% include ''forms/data.html.twig'' %}'
-			        -
-			            message: 'message sent'
-			---
+	---
+	title: 'Contact Form'
+	form:
+	    name: contactform
+	    classes: pure-form ajax-form-sending
+	    action: /form
+	    template: form-messages
+	    fields:
+	        -
+	            name: name
+	            label: 'full name'
+	            placeholder: 'full name'
+	            autocomplete: 'on'
+	            type: text
+	            validate: 
+	            	required: true
+	        -
+	            name: phone
+	            label: Phone
+	            placeholder: Phone
+	            type: text
+            	validate:
+          			required: true
+	        -
+	            name: email
+	            label: 'email'
+	            placeholder: 'example@test.com'
+	            type: email
+	        -
+	            name: message
+	            label: 'Your message'
+	            placeholder: 'Your message'
+	            type: textarea
+	    buttons:
+	        submit:
+	            type: submit
+	            value: Send
+	            classes: 'pure-button pure-button-primary button-large'
+	            wrapper: p
+	    process:
+	        -
+	            phpemail:
+	                subject: '[Site Contact Form] {{ form.value.name|e }}'
+	                body: '{% include ''forms/data.html.twig'' %}'
+	        -
+	            message: 'message sent'
+	---
 
-			# Main Form
-
+	# Main Form
 	</code>
 </pre>
