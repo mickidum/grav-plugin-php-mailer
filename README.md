@@ -1,8 +1,8 @@
 # Php Mailer Plugin
 
-**This README.md file should be modified to describe the features, installation, configuration, and general usage of this plugin.**
+**If your hosting provider is blocking some PHP functions, that needed for "email plugin" properly work from the core of Grav CMS you can use this plugin as a temporary solution.**
 
-The **Php Mailer** Plugin is for [Grav CMS](http://github.com/getgrav/grav). Sending mail through php
+The **Php Mailer** Plugin is for [Grav CMS](http://github.com/getgrav/grav). Sending mail through php mail() function
 
 ## Installation
 

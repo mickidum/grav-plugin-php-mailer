@@ -3,11 +3,10 @@ version: 0.1.0
 description: Sending mail through php
 icon: plug
 author:
-  name: Michael Suhovlansky
+  name: mickidum
   email: mickidum@gmail.com
 homepage: https://github.com/mickidum/grav-plugin-php-mailer
-demo: http://demo.yoursite.com
-keywords: grav, plugin, etc
+keywords: grav, plugin, mail sending, php mail, etc
 bugs: https://github.com/mickidum/grav-plugin-php-mailer/issues
 docs: https://github.com/mickidum/grav-plugin-php-mailer/blob/develop/README.md
 license: MIT
