@@ -8,7 +8,7 @@ author:
 homepage: https://github.com/mickidum/grav-plugin-php-mailer
 keywords: grav, plugin, mail sending, php mail, etc
 bugs: https://github.com/mickidum/grav-plugin-php-mailer/issues
-docs: https://github.com/mickidum/grav-plugin-php-mailer/blob/develop/README.md
+docs: https://github.com/mickidum/grav-plugin-php-mailer/blob/master/README.md
 license: MIT
 
 form:

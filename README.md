@@ -36,9 +36,15 @@ Before configuring this plugin, you should copy the `user/plugins/php-mailer/php
 
 Here is the default configuration and an explanation of available options:
 
-```yaml
-enabled: true
-```
+<pre>
+	<code>
+		enabled: true
+		from: frommail@test.com
+		from_name: 'Example name'
+		to: tomail@test.com
+		to_name: 'Example Name'
+	</code>
+</pre>
 
 Note that if you use the admin plugin, a file with your configuration, and named php-mailer.yaml will be saved in the `user/config/plugins/` folder once the configuration is saved in the admin.
 

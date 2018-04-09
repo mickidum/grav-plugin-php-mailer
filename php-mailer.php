@@ -43,7 +43,6 @@ class PHPMailerPlugin extends Plugin
     public function onPluginsInitialized()
     {
         require_once __DIR__ . '/classes/PHPemail.php';
-        // $this->email = new PHPemail();
     }
 
     
@@ -57,8 +56,6 @@ class PHPMailerPlugin extends Plugin
         $form = $event['form'];
         $action = $event['action'];
         $params = $event['params'];
-
-        
 
         switch ($action) {
             case 'phpemail':
@@ -86,7 +83,7 @@ class PHPMailerPlugin extends Plugin
      *
      * @param array $params
      * @param array $vars
-     * @return \Swift_Message
+     * @return array $message
      */
     protected function buildMessage(array $params, array $vars = array())
     {
