@@ -1,0 +1,64 @@
+name: Php Mailer
+version: 0.1.0
+description: Sending mail through php
+icon: plug
+author:
+  name: Michael Suhovlansky
+  email: mickidum@gmail.com
+homepage: https://github.com/mickidum/grav-plugin-php-mailer
+demo: http://demo.yoursite.com
+keywords: grav, plugin, etc
+bugs: https://github.com/mickidum/grav-plugin-php-mailer/issues
+docs: https://github.com/mickidum/grav-plugin-php-mailer/blob/develop/README.md
+license: MIT
+
+form:
+  validation: strict
+  fields:
+    enabled:
+      type: toggle
+      label: Plugin status
+      highlight: 1
+      default: 0
+      options:
+        1: Enabled
+        0: Disabled
+      validate:
+        type: bool
+    
+    from:
+      type: email
+      size: medium
+      label: Email from
+      placeholder: "Default email from address"
+      validate:
+        required: true
+        type: email
+
+    from_name:
+      type: text
+      size: medium
+      label: Email from name
+      placeholder: "Default email from name"
+
+    to:
+      type: email
+      size: medium
+      label: Email to
+      placeholder: "Default email to address"
+      multiple: true
+      validate:
+        required: true
+        type: email
+
+    to_name:
+      type: text
+      size: medium
+      label: Email to name
+      placeholder: "Default email to name"
+
+    body:
+      type: textarea
+      size: medium
+      label: Email body
+      placeholder: "Defaults to a table of all form fields"
